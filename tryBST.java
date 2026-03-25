@@ -39,5 +39,12 @@ public boolean isBST(TNode node, int min, int max){
     if(node == null) return true;
     if(node.key<min || node.key>max) return false;
     return isBST(node.left, min, node.key - 1) &&  isBST(node.right, node.key + 1, max);
-}
+}                      //check BST property
+private int minValue(TNode node){
+    while(node.left!= null){
+        node = node.left;
+    }
+    return node.key;
+}                     // find minimum value
+
     
