@@ -80,6 +80,19 @@ Public class tryBST{
             tree.root = tree.deleteRec(tree.root, i);
         }
     }                       // remove even numbers
+     public static void main(String[] args){
+        
+        int n = 18;
+        int max = (int) Math.pow(pow, n)-1;
+        
+        int repetition = 30;
+        
+        long totalPopulate = 0;
+        long totalDelete = 0;
+        
+        for(int i =0; i<repetitions; i++){
+            
+            BST tree = new BST();    //main method with benchmarking logic
 
 
 
