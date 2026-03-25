@@ -47,4 +47,23 @@ private int minValue(TNode node){
     return node.key;
 }                     // find minimum value
 
+public TNode deleteRec(TNode node, int key){
+    if(node == null) return null;
+    
+    if(key<node.key){
+        node.left = deleteRec(node.left, key);
+    }else if(key>node.key){
+        node.right = deleteRec(node.right, key);
+    }else{
+        if(node.left == null) return node.right;
+        if(node.right == null) return node.left;
+        
+        node.key = minValue(node.right);
+        node.right = deleteRec(node.right, node.key);
+    }
+    return node;
+}                       //Added delete operation to BST
+
+
+
     
