@@ -64,6 +64,17 @@ public TNode deleteRec(TNode node, int key){
     return node;
 }                       //Added delete operation to BST
 
+Public class tryBST{
+    static void buildBalanced(BST tree, int start, int end){
+        if(start>end) return;
+        
+        int mid = (start + end)/2;
+        tree.insert(mid);
+        
+        buildBalanced(tree, start, mid-1);
+        buildBalanced(tree, mid+1, end);
+    }                       // utility methods for building and modifying the tree
+
 
 
     
