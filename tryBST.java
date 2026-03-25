@@ -34,5 +34,10 @@ class BST{
     public void insert(int key){
         root = insertRec(root, key);
     }
-}                
+}                      //implemented BST core functionality
+public boolean isBST(TNode node, int min, int max){
+    if(node == null) return true;
+    if(node.key<min || node.key>max) return false;
+    return isBST(node.left, min, node.key - 1) &&  isBST(node.right, node.key + 1, max);
+}
     
