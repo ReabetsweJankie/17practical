@@ -74,6 +74,12 @@ Public class tryBST{
         buildBalanced(tree, start, mid-1);
         buildBalanced(tree, mid+1, end);
     }                       // utility methods for building and modifying the tree
+        
+    static void removeEvens(BST tree, int max){
+        for(int i = 2; i<=max; i+=2){
+            tree.root = tree.deleteRec(tree.root, i);
+        }
+    }                       // remove even numbers
 
 
 
